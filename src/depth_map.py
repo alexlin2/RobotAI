@@ -1,8 +1,8 @@
-import cv2 
+import cv2
 import numpy as np 
 import pyrealsense2 as rs
 
-class depth_map:
+class depthMap:
 
     def __init__(self):
         self.pipeline = rs.pipeline()
@@ -34,7 +34,7 @@ class depth_map:
         cv2.imshow('depth_debug',depth_frame_np)
 
 if __name__ == '__main__':
-    cam = depth_map()
+    cam = depthMap()
 
     while(True):
         color_frame_np, depth_frame_np = cam._get_depth_map()
